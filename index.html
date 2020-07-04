@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+        <title>
+            Define
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="stylesheet" type="text/css" href="css/responsive.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+
+    <body onload="load_index();" onresize="rez();"> 
+
+
+        <header>
+            <div class="navbar">
+                <div class="search-bar" id="s-b">
+                    <button id="go_style" onclick="h_se();"><i class="material-icons"> keyboard_backspace </i></button>
+                    <input type="text" id="in" placeholder="What you wanna get explained? eg.Google">
+                    <button onclick="go();" class="dis-none" id="go"><i class="material-icons"> check </i></button>
+                </div>
+                <div id="respo_nav">
+                    <img src="https://www.wikipedia.org/portal/wikipedia.org/assets/img/Wikipedia-logo-v2@1.5x.png" alt="Fav_icon" height="40px" width="40px">
+                    <button id="go_style" onclick="search()" ><i class="material-icons"> search </i></button>
+                </div>
+            </div>
+
+            <!--<script>
+                $('#in').focus(function(){
+                    //document.getElementById('s-b').style = " box-shadow: 0 0 0 3px rgba(0, 2, 3, 0.5);";
+                });
+
+                $('input').blur(function(){
+                    //document.getElementById('s-b').style = " border: 0px solid black;";
+                });
+
+            </script>-->
+
+            <script>
+                var input = document.getElementById("in");
+                input.addEventListener("keyup", function(event) {
+                    if (event.keyCode === 13) {
+                        event.preventDefault();
+                        document.getElementById("go").click();
+                    }
+                });
+
+            </script>
+
+        </header>
+        <main>
+            
+
+            <div class="main" id="m-s">
+
+                <div class="img-sec">
+                    <img id="img" src="" alt="Loading.." width="100%">
+                </div>
+
+                
+                <div class="content">
+                    <article>
+                        <div id="content" onchange="nxt();"></div>
+                    </article>
+
+                </div>               
+            </div>
+
+            <script>
+               
+                $('#go').click(function () {
+                    $('#See_also').parent().fadeOut();
+                });
+
+                $('p').each(function() {
+                if ($(this).text() === '') {
+                    $(this).remove();
+                }
+                });
+            </script>
+        </main>
+
+
+
+        <footer>
+
+        </footer>
+
+
+
+    </body>
+</html>

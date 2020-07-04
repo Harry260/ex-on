@@ -1,0 +1,238 @@
+
+/*Fonts*/
+@font-face { font-family: Kei; src: url('fonts/KievitOT-Light.otf'); }
+
+*{
+    font-family: "Kei", Times, serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    color: black;
+    transition: 0.4s;
+}
+
+body{
+    /*colors: #24292e;*/
+    background-color: white;
+}
+
+header{
+    top: 0px;
+}
+.navbar{
+    background-color: transparent;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+    padding-left: 15px;
+}
+
+.search-bar{
+    width: fit-content;
+    background-color:#f6f8fa;
+    border-radius: 10px;
+    padding:2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    transition: 0.1s;
+    margin:auto;
+}
+.navbar #go{
+    border-radius: 40px;
+    padding: 5px;
+    border: 0;
+    vertical-align: middle;
+    display: none;
+    outline: 0px;
+    background-color: transparent;
+    transition: 0.5s;
+    color: gray;
+
+}
+.navbar #go:hover{
+    color: white;
+    transition: 0.5s;
+}
+
+#go_style{
+    border-radius: 40px;
+    padding: 5px;
+    border: 0;
+    vertical-align: middle;
+    outline: 0px;
+    background-color: transparent;
+    transition: 0.5s;
+    color: gray;
+    padding: 0 5px;
+    display: none;
+
+}
+
+#respo_nav{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: space-between;
+    display: none;    
+}
+
+#respo_nav img{
+    margin: auto 0;
+}
+
+.search-bar input{
+  background-color: transparent;  
+  font-size: 15px;
+  color: gray;
+  width: 350px;
+  height: 40px;
+}
+
+.search-bar input {
+    border: none ! important;
+    box-shadow: none ! important;
+    outline: none ! important;
+}
+.search-bar input:focus {
+    border: none ! important;
+    box-shadow: none ! important;
+    outline: none ! important;
+}
+
+.img-sec, .content{
+    width: 70%;
+    margin: 30px auto;
+
+}
+
+.img-sec{
+    overflow: hidden;
+}
+
+#content{
+    font-size: 20px;
+    line-height: 25px;
+    font-family: 'Crimson Text', serif;
+    font-weight: 400;
+
+}
+
+.img-sec img{
+    border-radius: 25px;
+    filter: blur(25px);
+    -webkit-filter: blur(25px);
+    -moz-filter: blur(25px);
+    -o-filter: blur(25px);
+    -ms-filter: blur(25px);
+    transition: 0.7s;
+    display: none;
+
+}
+
+.main  p,h2,h1,h3,h4,h5,h6{
+    margin-bottom: 20px;
+}
+.main h2 {
+    margin-top: 100px;
+    margin-bottom: 30px;
+    font-size: 45px;
+    text-transform: capitalize;
+}
+
+.main h3{
+    background-color: #f6f6f6;
+    color: white;
+    border-radius: 10px;
+    width: fit-content;
+    padding: 10px;
+    font-weight: 50;
+}
+
+h4{
+    border-left: 3px solid black;
+    padding-left: 10px;
+}
+
+#head-ing{
+    font-size: 40px;
+    font-weight: 100;
+}
+ 
+#Notes, #External_links, #References, #Further_reading, #Notes, #Other_websites{
+    display: none;
+    border-bottom: 0px white;
+    background-color: transparent;
+    margin: 0px;
+}
+p{
+    font-weight: 200;
+}
+
+.mw-empty-elt{
+    background-color: aqua;
+}
+#content p, ul{
+
+    padding: 20px;
+    border-radius: 20px;
+}
+#content ul li{
+    background-color: #f6f6f6;
+    padding: 10px;
+    margin: 20px;
+    border-radius: 12px;
+}
+#content ul {
+    margin-top: 45px;
+}
+
+#drag-c{
+
+    position: absolute;
+    z-index: 9;
+    background-color: #f1f1f1;
+    text-align: center;
+    border: 1px solid #d3d3d3;
+    /*box-shadow:
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12)*/
+}
+#drag-cheader{
+    padding: 10px;
+    cursor: move;
+    z-index: 10;
+    background-color: #2196F3;
+    color: #fff;
+}
+
+#content p:hover{
+    background-color: #f6f6f6;
+
+}
+
+li ul{
+    display: none;
+}
+
+.content h2:empty {
+    display: none;
+    margin: 0;
+    padding: 0; 
+}
+
+#content p:first-of-type {
+    background: red;
+  }
+
+
