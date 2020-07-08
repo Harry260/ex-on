@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>na</title>
+        <script>
+            function load_droid(){
+
+                let _api_con;
+                let _api_img;
+
+
+                let search = window.location.search.substr(2);
+
+                /* API Url */
+                let url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&titles="+search+"&redirects=false";
+
+                fetch(url).then(res => res.json()).then((jsondata) => {
+
+                    /* Parsing API Response*/
+                    var response = JSON.stringify(jsondata, undefined, 2)
+                    var suggestionData = JSON.parse(response);
+                    var pageid = Object.keys(suggestionData.query.pages)[0];
+
+                    /* Add Value into HTML Page */
+
+
+                    
+                    document.getElementById("extract").innerHTML = suggestionData.query.pages[pageid].extract;
+                    document.title += " &split& " + document.getElementById("extract").textContent;
+                    alert(document.title)
+
+                }).catch(err => { throw err });
+
+                let iurl = "https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&origin=*&piprop=original&titles="+search;
+
+                fetch(iurl).then(res => res.json()).then((jsondata) => {
+
+                    /* Parsing API Response*/
+                    var iresponse = JSON.stringify(jsondata, undefined, 2)
+                    var isuggestionData = JSON.parse(iresponse);
+                    var ipageid = Object.keys(isuggestionData.query.pages)[0];
+                    console.log(ipageid);
+
+                    document.getElementById("img").textContent = isuggestionData.query.pages[ipageid].original.source;
+                    document.title = document.getElementById("img").textContent;
+
+
+                }).catch(err => { throw err });
+
+
+
+            }
+
+        </script>
+    </head>
+    <body onload="load_droid();">
+        <p id="extract"></p>
+        <p id="img"></p>
+
+    </body>
+</html>
