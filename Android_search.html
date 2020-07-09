@@ -7,12 +7,20 @@
 
                 let _api_con;
                 let _api_img;
+                let mode;
 
 
                 let search = window.location.search.substr(2);
+                if(window.location.hash != ""){
+                    mode = window.location.hash.substr(1);
+                }
+                else{
+                    mode = "en";
+                }
+
 
                 /* API Url */
-                let url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&titles="+search+"&redirects=false";
+                let url = "https://"+ mode +".wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&titles="+search+"&redirects=false";
 
                 fetch(url).then(res => res.json()).then((jsondata) => {
 
@@ -27,7 +35,7 @@
                     
                     document.getElementById("extract").innerHTML = suggestionData.query.pages[pageid].extract;
                     document.title += " &split& " + document.getElementById("extract").textContent;
-
+                    alert(mode)
 
                 }).catch(err => { throw err });
 
