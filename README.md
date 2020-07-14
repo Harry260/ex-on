@@ -14,3 +14,9 @@ Ex-on(Repo name) is a simple web app works with wikipedia API. With this anyone 
 > This is the api used to get image content<br>
 > `https://en.wikipedia.org/w/api.php?action=query&prop=pageimages&format=json&origin=*&piprop=original&titles= query`<br>
 > *'query' is the users input*
+
+<br>
+<br>
+
+#### I have also made an widows app with the same api
+Repo : [Definitionio | GitHub](https://github.com/Harry260/Definitionio)
