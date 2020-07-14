@@ -16,7 +16,14 @@ Ex-on(Repo name) is a simple web app works with wikipedia API. With this anyone 
 > *'query' is the users input*
 
 <br>
-<br>
+
+# More
+#### Demo
+https://harry260.github.io/ex-on/index<br>
 
 #### I have also made an widows app with the same api
 Repo : [Definitionio | GitHub](https://github.com/Harry260/Definitionio)
+
+<br>
+
+
