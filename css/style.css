@@ -176,7 +176,7 @@ p{
 }
 
 .mw-empty-elt{
-    background-color: aqua;
+    display:none;
 }
 #content p, ul{
 
@@ -231,8 +231,5 @@ li ul{
     padding: 0; 
 }
 
-#content p:first-of-type {
-    background: red;
-  }
 
 
