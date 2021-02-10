@@ -3,7 +3,7 @@
 
 function load_index(){
 
-    document.getElementById('in').value = window.location.search.substr(2);
+    document.getElementById('in').value = decodeURIComponent(window.location.search.substr(2));
     get();
 }
 function get(){
@@ -11,7 +11,7 @@ function get(){
     document.getElementById('img').style = "filter:blur(25px);";
     timeoutblur();
     document.getElementById('img').style = "display:block;";
-    let search = window.location.search.substr(2).toLowerCase();
+    let search = decodeURIComponent(window.location.search.substr(2).toLowerCase());
 
     let url = "https://en.wikipedia.org/w/api.php?format=json&action=query&prop=extracts&origin=*&titles="+ search.toLowerCase() +"&redirects=false";
 
